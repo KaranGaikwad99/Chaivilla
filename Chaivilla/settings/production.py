@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os
+import datetime
+from Chaivilla.settings.aws import *
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR =  os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -49,6 +51,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'menu',
     'home',
+    'storages',
+
 ]
 
 MIDDLEWARE = [
@@ -132,9 +136,34 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [
+#STATICFILES_DIRS = [
     
-    os.path.join(BASE_DIR, 'static'),]
+    #os.path.join(BASE_DIR, 'static'),]
+
+
+MEDIA_URL = '/media/'
+
+MEDIA_ROOT =  os.path.join((BASE_DIR),"mediafiles", )
+
+AWS_ACCESS_KEY_ID = "AKIAI53L6XTJUFFYHL2A"
+AWS_SECRET_ACCESS_KEY = "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"
+AWS_STORAGE_BUCKET_NAME = 'chaivilla-static'
+AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+AWS_S3_OBJECT_PARAMETERS = {
+    'CacheControl': 'max-age=86400',
+}
+AWS_LOCATION = 'static'
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]
+MEDIA_URL ='https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
+STATIC_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
+ADMIN_MEDIA_PREFIX = STATIC_URL + 'admin/'
+STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+#DEFAULT_FILE_STORAGE='MotionPictures.storage_backends.MediaStore'
+#DEFAULT_FILE_STORAGE = '.settings.aws.utils.MediaRootS3BotoStorage'
+
 
 CORS_REPLACE_HTTPS_REFERER      = True
 HOST_SCHEME                     = "https://"
