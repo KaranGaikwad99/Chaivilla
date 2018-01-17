@@ -284,10 +284,16 @@
 					
 					<div class="menus_top_menu text-center wow slideInDown" data-wow-duration="1.5s">
 						<ul>
-							<li class="active"><a href="{% url 'Beverage_view' %}">Beverages</a></li>
+							<!-- <li class="active"><a href="{% url 'Beverage_view' %}">Beverages</a>
+							</li>
 							<li><a href="{% url 'sandwitch_view' %}">Sandwitches</a></li>
 							<li><a href="{% url 'Desserts_view' %}">Desserts</a></li>
-							<li><a href="{% url 'MainCourse' %}">Main Course</a></li>
+							<li><a href="{% url 'MainCourse' %}">Main Course</a></li> -->
+							{% for s in menu %}
+									
+								  <li><a href="{% url 'item' menu_id=s.category %}"> {{ s.category }} </a> </li>&nbsp;   
+								 					
+							{% endfor %}
 						</ul>
 					</div>
 					
@@ -303,23 +309,16 @@
 
 							{% endfor %}
 							</ul>
-					
-
 
 						</div>
 					</div>
 					
-					<div class="col-md-6 col-sm-6 col-xs-12">
-						<div class="single_menus wow slideInRight" data-wow-duration="1.5s">
-							<ul>
-								
-							</ul>
-						</div>
-					</div>
+					
 				</div>
 			</div>
 		</div> 
 	</section>
+
 
 	<section id="abouts" class="abouts sections">
 		<div class="container">
