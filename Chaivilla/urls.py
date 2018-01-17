@@ -29,8 +29,8 @@ from menu.views import item
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    #url(r'^$',Homepageview.as_view()),
-    url(r'^$',Menu_view,name='Menu_view'),
+    url(r'^$',Homepageview.as_view()),
+    #url(r'^$',Menu_view,name='Menu_view'),
     #url(r'^sandwitch/',sandwitch_view,name="sandwitch_view"),
     #url(r'^Desserts/',Desserts_view,name="Desserts_view"),
     #url(r'^Beverage/',Beverage_view,name='Beverage_view'),        
