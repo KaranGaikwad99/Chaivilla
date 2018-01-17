@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from Menu.views import Menu_view
+from menu.views import Menu_view
 from django.views.generic import TemplateView
 from django.core.urlresolvers import reverse
 

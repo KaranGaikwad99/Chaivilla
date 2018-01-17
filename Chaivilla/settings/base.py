@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'menu',
     'home',
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -122,8 +123,8 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     
     os.path.join(BASE_DIR, 'static'),]
-#CORS_REPLACE_HTTPS_REFERER      = False
-#HOST_SCHEME                     = "http://"
+CORS_REPLACE_HTTPS_REFERER      = False
+HOST_SCHEME                     = "http://"
 SECURE_PROXY_SSL_HEADER         = None
 SECURE_SSL_REDIRECT             = False
 SESSION_COOKIE_SECURE           = False
