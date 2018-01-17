@@ -12,7 +12,7 @@ def item(request, menu_id):
 	queryset= Menu_model.objects.filter(category__types=menu_id)
 	#print queryset
 	context={
-	'items':queryset
+		'items':queryset
 	}
 	#return render(template,render(context,request))
 	return render(request,"menu.html",context)
@@ -24,7 +24,7 @@ def Menu_view(request):
 	#print (queryset)
 	model = Menu_model
 	context={
-	"menu":queryset
+		'menu':queryset
 
 	}
 #	print (context)
@@ -36,7 +36,7 @@ def Beverage_view(request):
 	#print (queryset)
 	model = Menu_model
 	context={
-	"menu":queryset
+		"menu":queryset
 
 	}
 #	print (context)
