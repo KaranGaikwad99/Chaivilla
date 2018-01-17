@@ -8,7 +8,7 @@ from .models import Menu_model
 
 
 def item(request, menu_id):
-	template_name='templates/menu.html'	
+	#template=loader.get_template('menu.html')	
 	queryset= Menu_model.objects.filter(category__types=menu_id)
 	#print queryset
 	context={
@@ -29,54 +29,3 @@ def Menu_view(request):
 	}
 #	print (context)
 	return render(request,"index.html",context)
-
-def Beverage_view(request):
-	queryset= Menu_model.objects.filter( category_id=1)
-	#queryset=Menu_model.objects.get(category="Beverages")
-	#print (queryset)
-	model = Menu_model
-	context={
-		"menu":queryset
-
-	}
-#	print (context)
-	return render(request,"beverages.html",context)
-
-def sandwitch_view(request):
-	queryset= Menu_model.objects.filter( category_id=2)
-	#queryset=Menu_model.objects.get(category="Beverages")
-	#print (queryset)
-	model = Menu_model
-	context={
-	"menu":queryset
-
-	}
-#	print (context)
-	return render(request,"Sandwitches.html",context)
-
-
-def Desserts_view(request):
-	queryset= Menu_model.objects.filter( category_id=3)
-	#queryset=Menu_model.objects.get(category="Beverages")
-	#print (queryset)
-	model = Menu_model
-	context={
-	"menu":queryset
-
-	}
-#	print (context)
-	return render(request,"index.html",context)
-
-
-def MainCourse(request):
-	queryset= Menu_model.objects.filter( category_id=4)
-	#queryset=Menu_model.objects.get(category="Beverages")
-	#print (queryset)
-	model = Menu_model
-	context={
-	"menu":queryset
-
-	}
-#print (context)
-	return render(request,"maincourse.html",context)
-

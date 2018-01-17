@@ -19,10 +19,7 @@ from menu.views import Menu_view
 from django.views.generic import TemplateView
 from django.core.urlresolvers import reverse
 
-from menu.views import MainCourse
-from menu.views import Beverage_view
-from menu.views import Desserts_view
-from menu.views import sandwitch_view
+
 from home.views import Homepageview
 from menu.views import item
 #from home.views import BeverageView
