@@ -267,12 +267,6 @@
 			</div>
 		</div>
 	</section>
-
-
-	
-	
-	
-	
 	<section id="menus" class="menus sections">
 		<div class="container">
 			<div class="row">
@@ -284,15 +278,10 @@
 					
 					<div class="menus_top_menu text-center wow slideInDown" data-wow-duration="1.5s">
 						<ul>
-							<!-- <li class="active"><a href="{% url 'Beverage_view' %}">Beverages</a>
-							</li>
-							<li><a href="{% url 'sandwitch_view' %}">Sandwitches</a></li>
-							<li><a href="{% url 'Desserts_view' %}">Desserts</a></li>
-							<li><a href="{% url 'MainCourse' %}">Main Course</a></li> -->
+							
 							{% for s in menu %}
-									
-								  <li><a href="{% url 'item' menu_id=s.category %}"> {{ s.category }} </a> </li>&nbsp;   
-								 					
+								<li><a href="{% url 'item' menu_id=s.category %}"> {{ s.category }} 
+								</a> </li>&nbsp;   
 							{% endfor %}
 						</ul>
 					</div>
@@ -301,19 +290,17 @@
 						<div class="single_menus wow slideInLeft" data-wow-duration="1.5s">
 						
 							<ul>	
-							{% for s in menu %}
+								{% for s in menu %}
 									
 								<li>	{{ s.name }} ...........................................................
 								{{ s.price }}</li>    
 							
 
-							{% endfor %}
+								{% endfor %}
 							</ul>
 
 						</div>
 					</div>
-					
-					
 				</div>
 			</div>
 		</div> 
