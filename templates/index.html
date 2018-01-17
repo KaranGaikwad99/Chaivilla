@@ -63,9 +63,6 @@
 			
 		</div>
 	</header> <!--End of header -->
-	
-	
-	
 	<section id="banner" class="banner">
 		<div class="container">
 			<div class="row">
@@ -76,21 +73,13 @@
 							<div class="separetor"></div>
 						</div>
 					</div>
-					
-					
 					<div class="scrolldown">
 						<a href="#special" class="scroll_btn"></a>
 					</div>
 				</div>
-				
-				
 			</div>
 		</div>
 	</section><!-- End of Banner Section -->
-	
-	
-
-	
 	<section id="features" class="features sections">
 		<div class="container">
 			<div class="row">
@@ -278,10 +267,10 @@
 					
 					<div class="menus_top_menu text-center wow slideInDown" data-wow-duration="1.5s">
 						<ul>
-							
 							{% for s in menu %}
-								<li><a href="{% url 'item' menu_id=s.category %}"> {{ s.category }} 
-								</a> </li>&nbsp;   
+									
+								  <li><a href="{% url 'item' menu_id=s.category %}"> {{ s.category }} </a> </li>&nbsp;   
+								 					
 							{% endfor %}
 						</ul>
 					</div>
