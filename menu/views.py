@@ -9,7 +9,7 @@ from .models import Menu_model
 
 def item(request, menu_id):
 	#template=loader.get_template('menu.html')	
-	queryset= Menu_model.objects.filter(category__types=menu_id)
+	queryset= Menu_model.objects.filter(category_types=menu_id)
 	#print queryset
 	context={
 	'items':queryset
