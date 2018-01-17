@@ -26,7 +26,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY','m-o8^m18&i2v(5brf)p%=m&$0cdo+9*!qa$uqm
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['chaivilla.herokuapp.com']
+ALLOWED_HOSTS = []
 
 
 EMAIL_HOST = 'smtp.gmail.com'
