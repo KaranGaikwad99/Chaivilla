@@ -36,6 +36,6 @@ urlpatterns = [
     url(r'^Beverage/',Beverage_view,name='Beverage_view'),        
     url(r'^MainCourse',MainCourse,name='MainCourse'),
     #url(r'^item/(?P<menu_id>[0-9]+)',item,name='item'),
-   url(r'^item/(?P<menu_id>[\w-]+)/$',item,name='item'),
+   url(r'^menu/item/(?P<menu_id>[\w-]+)/$',item,name='item'),
   #  url(r'beverages',BeverageView,name='BeverageView'),
 ]
