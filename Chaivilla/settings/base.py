@@ -25,7 +25,7 @@ SECRET_KEY = 'm-o8^m18&i2v(5brf)p%=m&$0cdo+9*!qa$uqmztfixd(z5ev$'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1' ]
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -122,8 +122,8 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     
     os.path.join(BASE_DIR, 'static'),]
-CORS_REPLACE_HTTPS_REFERER      = False
-HOST_SCHEME                     = "http://"
+#CORS_REPLACE_HTTPS_REFERER      = False
+#HOST_SCHEME                     = "http://"
 SECURE_PROXY_SSL_HEADER         = None
 SECURE_SSL_REDIRECT             = False
 SESSION_COOKIE_SECURE           = False
