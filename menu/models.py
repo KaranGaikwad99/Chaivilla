@@ -16,7 +16,7 @@ class Category(models.Model):
 
 
 class Menu_model(models.Model):
-	category = models.ForeignKey(Category)
+	category = models.ForeignKey('category')
 	time     = models.DateTimeField(auto_now_add=True)
 	name     = models.CharField(max_length=100)
 	price    = models.IntegerField(default = 0)
