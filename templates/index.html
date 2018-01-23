@@ -279,7 +279,7 @@
 					<div class="col-md-6 col-sm-6 col-xs-12">
 						<div class="single_menus wow slideInLeft" data-wow-duration="1.5s">
 						
-							<ul>	
+							<!-- <ul>	
 								{% for s in menu %}
 									
 								<li>{{ s.name }} ...........................................................
@@ -287,7 +287,9 @@
 							
 
 								{% endfor %}
-							</ul>
+							</ul> -->
+							{% block content %}
+							{% endblock %}
 
 						</div>
 					</div>
