@@ -145,14 +145,6 @@ MEDIA_URL = '/media/'
 
 MEDIA_ROOT =  os.path.join((BASE_DIR),"mediafiles" )
 
-#AWS_ACCESS_KEY_ID = "AKIAI53L6XTJUFFYHL2A"
-#AWS_SECRET_ACCESS_KEY = "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"
-#AWS_STORAGE_BUCKET_NAME = 'chaivilla-static'
-#AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
-#AWS_S3_OBJECT_PARAMETERS = {
- #   'CacheControl': 'max-age=86400',
-#}
-#AWS_LOCATION = 'static'
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
